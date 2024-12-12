@@ -1,0 +1,52 @@
+Documentation for Risk Board Game Server
+
+
+Project Structure
+
+	•	lib.rs: Contains the core game logic and data structures.
+	•	main.rs: Implements a REST API using Rocket.
+	•	game_tests.rs: Contains integration tests for the game logic.
+
+Core Data Structures
+
+	•	Territory: Represents a territory on the game board.
+	•	Continent: Represents a continent, which is a collection of territories.
+	•	Board: Represents the entire game board, including territories and continents.
+	•	Player: Represents a player in the game, holding information about territories, armies, and cards.
+	•	GameState: Manages the overall state of the game, including players, board, deck, and current turn.
+	•	Card: Represents a card in the game, which can be traded in for reinforcement armies.
+	•	CardKind: Enum representing the type of card (Infantry, Cavalry, Artillery).
+
+Initialization and Setup
+
+	•	initialize_game: Shuffles territories and distributes them among players. Each player starts with a set number of armies.
+	•	new: Initializes a new, empty game state.
+
+Gameplay Functions
+
+Reinforcement
+
+	•	reinforce: Allows a player to reinforce a territory with additional armies.
+	•	bulk_reinforce: Allows a player to reinforce multiple territories with additional armies in a single request.
+
+Attack
+
+	•	attack: Handles the logic for attacking a territory, including dice rolls and applying losses.
+	•	handle_attack: Manages the attack process, including moving armies if a territory is conquered.
+	•	move_armies_after_attack: Handles the movement of armies after a successful attack.
+
+Fortification
+
+	•	fortify: Allows a player to move armies between adjacent territories they control.
+
+Card Trade
+
+	•	trade_in_cards: Allows a player to trade in cards for bonus armies.
+
+
+REST API Endpoints
+
+	•	/reinforce: Reinforces a territory for a specified player.
+	•	/attack: Handles an attack from one territory to another.
+	•	/fortify: Fortifies a territory by moving armies from another territory.
+	•	/game-state: Retrieves the current game state.
