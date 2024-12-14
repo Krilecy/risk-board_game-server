@@ -13,7 +13,7 @@ Key features:
 
 ## Prerequisites
 
-- Rust (latest stable version)
+- Rust
 - Cargo (Rust package manager)
 - Git
 
@@ -22,7 +22,7 @@ Key features:
 1. Clone the repository:
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/Krilecy/risk-board_game-server.git
 cd risk-board-game-engine
 ```
 
