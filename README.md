@@ -13,7 +13,7 @@ Key features:
 
 ## Prerequisites
 
-- Rust (latest stable version)
+- Rust
 - Cargo (Rust package manager)
 - Git
 
@@ -22,23 +22,17 @@ Key features:
 1. Clone the repository:
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/Krilecy/risk-board_game-server.git
 cd risk-board-game-engine
 ```
 
-2. Install dependencies:
+2. Build:
 
 ```bash
 cargo build
 ```
 
-3. (Optional) Precompute battle probabilities for large armies:
-
-```bash
-cargo run --bin precompute_conquest_probabilities
-```
-
-4. Run the game:
+3. Run the game:
 
 ```bash
 cargo run
