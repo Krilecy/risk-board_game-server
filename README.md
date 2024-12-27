@@ -85,3 +85,4 @@ I consider this project to be feature complete. It was a fun project to implemen
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+Disclaimer: This is a non-commercial hobby project and not in any way affiliated with the copy write holders of the Risk board game.
